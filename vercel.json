@@ -1,23 +1,14 @@
 {
     "version": 2,
-    "functions": {
-        "api/test.js": {
-            "memory": 3008,
-            "maxDuration": 30
-        },
-        "api/*.js": {
-            "memory": 3008,
-            "maxDuration": 15
-        }
-    },
     "builds": [
         {
             "src": "django_ml/wsgi.py",
             "use": "@vercel/python",
             "config": {
-                "maxLambdaSize": "240mb",
+                "maxLambdaSize": "250mb",
                 "runtime": "python3.9"
-            }
+            },
+            "exclude": ["large-assets", "unnecessary-folder"]
         }
     ],
     "routes": [
