@@ -20,5 +20,7 @@
             "src": "/(.*)",
             "dest": "django_ml/wsgi.py"
         }
-    ]
+    ],
+
+    "buildCommand": "next build"
 }
