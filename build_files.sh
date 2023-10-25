@@ -1,6 +1,5 @@
 
 echo " BUILD START"
-python3.8 -m pip install -r requirements.txt
-python3.8 pip install django
-python3.8 manage.py collectstatic --noinput --clear
+python3.9 -m pip install -r requirements.txt
+python3.9 manage.py collectstatic --noinput --clear
 echo " BUILD END"
