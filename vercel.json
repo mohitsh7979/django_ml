@@ -4,7 +4,7 @@
       {
         "src": "django_ml/wsgi.py", 
         "use": "@vercel/python",
-        "config":{ "maxLambdaSize": "250mb","runtime":"python3.9"}
+        "config":{ "maxLambdaSize": "240mb","runtime":"python3.9"}
       }
     ],
     "routes": [
@@ -16,7 +16,19 @@
         "src": "/(.*)",
         "dest": "django_ml/wsgi.py"
       }
-    ]
+    ],
+    "functions": {
+        "api/test.js": {
+          "memory": 3008,
+          "maxDuration": 30 
+        },
+        "api/*.js": {
+          "memory": 3008,
+          "maxDuration": 15 
+        }
+      }
+
+
 }
 
   
