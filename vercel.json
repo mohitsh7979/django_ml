@@ -7,8 +7,7 @@
             "config": {
                 "maxLambdaSize": "250mb",
                 "runtime": "python3.9"
-            },
-            "exclude": ["large-assets", "unnecessary-folder"]
+            }
         }
     ],
     "routes": [
@@ -20,7 +19,7 @@
             "src": "/(.*)",
             "dest": "django_ml/wsgi.py"
         }
-    ],
+    ]
 
-    "buildCommand": "next build"
+    
 }
